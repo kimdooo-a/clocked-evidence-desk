@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "mode": "live",
+  "reviewedAt": "2026-10-27T14:23:43.021Z",
+  "outcome": "hold",
+  "reasons": [
+    "Eligibility: uncertain decision."
+  ],
+  "title": "Open Tools Microgrant",
+  "rows": [
+    {
+      "id": "title-0",
+      "key": "title",
+      "label": "Opportunity",
+      "value": "Open Tools Microgrant",
+      "quote": "Open Tools Microgrant",
+      "start": 24,
+      "end": 45,
+      "confidence": 0.9999999991343149,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9947,
+        "quote": "Open Tools Microgrant"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "deadline-1",
+      "key": "deadline",
+      "label": "Submission deadline",
+      "value": "December 15, 2026 at 17:00 UTC",
+      "quote": "December 15, 2026 at 17:00 UTC",
+      "start": 185,
+      "end": 215,
+      "confidence": 0.9999999978928815,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9964,
+        "quote": "December 15, 2026 at 17:00 UTC."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "timezone-2",
+      "key": "timezone",
+      "label": "Deadline timezone",
+      "value": "UTC",
+      "quote": "UTC",
+      "start": 212,
+      "end": 215,
+      "confidence": 0.9999999467048989,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.992,
+        "quote": "17:00 UTC."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-3",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "Independent developers aged 18 or older may apply worldwide.",
+      "quote": "Independent developers aged 18 or older may apply worldwide.",
+      "start": 60,
+      "end": 120,
+      "confidence": 0.9999999994971835,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9954,
+        "quote": "Independent developers aged 18 or older may apply worldwide."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-4",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "Employees of the organizer may not enter.",
+      "quote": "Employees of the organizer may not enter.",
+      "start": 121,
+      "end": 162,
+      "confidence": 0.999999997289529,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9963,
+        "quote": "Employees of the organizer may not enter."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-5",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "A project proposal",
+      "quote": "A project proposal",
+      "start": 237,
+      "end": 255,
+      "confidence": 0.9999999997300875,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9948,
+        "quote": null
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-6",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "a budget spreadsheet",
+      "quote": "a budget spreadsheet",
+      "start": 257,
+      "end": 277,
+      "confidence": 0.9999999995743953,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9945,
+        "quote": null
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-7",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "a public source repository URL",
+      "quote": "a public source repository URL",
+      "start": 279,
+      "end": 309,
+      "confidence": 0.9999999991021131,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9952,
+        "quote": "a public source repository URL."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "fee-8",
+      "key": "fee",
+      "label": "Entry fee",
+      "value": "No entry fee",
+      "quote": "No entry fee",
+      "start": 322,
+      "end": 334,
+      "confidence": 0.9999999873160171,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9954,
+        "quote": "No entry fee."
+      },
+      "status": "supported"
+    },
+    {
+      "id": "ai_policy-9",
+      "key": "ai_policy",
+      "label": "AI policy",
+      "value": "AI-assisted development is allowed with disclosure.",
+      "quote": "AI-assisted development is allowed with disclosure.",
+      "start": 347,
+      "end": 398,
+      "confidence": 0.9999999996936384,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.9959,
+        "quote": "AI-assisted development is allowed with disclosure."
+      },
+      "status": "supported"
+    }
+  ],
+  "decisions": {
+    "eligibility": {
+      "type": "choice",
+      "choice": "needs_review",
+      "probabilities": {
+        "eligible": 0.0204,
+        "ineligible": 0.022,
+        "needs_review": 0.9576
+      },
+      "confidence": 0.9365
+    },
+    "deadline": {
+      "type": "choice",
+      "choice": "open",
+      "probabilities": {
+        "open": 0.9933,
+        "closed": 0.0038,
+        "needs_review": 0.0029
+      },
+      "confidence": 0.9899
+    }
+  },
+  "models": {
+    "extract": "clocked-1.0",
+    "decide": "clocked-1.0",
+    "verify": "clocked-1.0"
+  },
+  "transport": [
+    {
+      "endpoint": "extract",
+      "requestId": "bc29f83b-725c-4995-af88-5762bd605b82",
+      "httpStatus": 200,
+      "elapsedMs": 1523,
+      "credits": "9",
+      "modelMs": "211.099014"
+    },
+    {
+      "endpoint": "decide",
+      "requestId": "68e9a669-44f1-45fa-953d-2814373393e5",
+      "httpStatus": 200,
+      "elapsedMs": 509,
+      "credits": "1",
+      "modelMs": "23.916033"
+    },
+    {
+      "endpoint": "grounding",
+      "requestId": "b54344ca-fdfa-4a6c-9fd3-bcd47397f5ee",
+      "httpStatus": 200,
+      "elapsedMs": 754,
+      "credits": "10",
+      "modelMs": "237.487075"
+    }
+  ],
+  "source": "FICTIONAL OPPORTUNITY — Open Tools Microgrant\n\nEligibility: Independent developers aged 18 or older may apply worldwide. Employees of the organizer may not enter.\n\nSubmission deadline: December 15, 2026 at 17:00 UTC.\nRequired documents: A project proposal; a budget spreadsheet; a public source repository URL.\nEntry fee: No entry fee.\nAI policy: AI-assisted development is allowed with disclosure.\nThis synthetic notice is for demonstration only.",
+  "applicant": "I am a 29-year-old independent developer living in South Korea. I am not employed by the organizer. I am applying alone.",
+  "policy": {
+    "threshold": 0.85,
+    "description": "Review required for missing critical facts, uncertain reads, mismatched spans, or unverified claims. Ready means ready for human review, never a submission or guarantee."
+  },
+  "delivery": "recorded"
+}

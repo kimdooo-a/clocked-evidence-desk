@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "mode": "fixture",
+  "reviewedAt": "2026-10-27T12:00:00.000Z",
+  "outcome": "ready_to_review",
+  "reasons": [],
+  "title": "Open Tools Microgrant",
+  "rows": [
+    {
+      "id": "title-0",
+      "key": "title",
+      "label": "Opportunity",
+      "value": "Open Tools Microgrant",
+      "quote": "Open Tools Microgrant",
+      "start": 24,
+      "end": 45,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "Open Tools Microgrant"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "deadline-1",
+      "key": "deadline",
+      "label": "Submission deadline",
+      "value": "December 15, 2026 at 17:00 UTC",
+      "quote": "December 15, 2026 at 17:00 UTC",
+      "start": 185,
+      "end": 215,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "December 15, 2026 at 17:00 UTC"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "timezone-2",
+      "key": "timezone",
+      "label": "Deadline timezone",
+      "value": "UTC",
+      "quote": "UTC",
+      "start": 212,
+      "end": 215,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "UTC"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-3",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "Independent developers aged 18 or older",
+      "quote": "Independent developers aged 18 or older",
+      "start": 60,
+      "end": 99,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "Independent developers aged 18 or older"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-4",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "worldwide",
+      "quote": "worldwide",
+      "start": 110,
+      "end": 119,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "worldwide"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-5",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "Employees of the organizer may not enter",
+      "quote": "Employees of the organizer may not enter",
+      "start": 121,
+      "end": 161,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "Employees of the organizer may not enter"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-6",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "A project proposal",
+      "quote": "A project proposal",
+      "start": 237,
+      "end": 255,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "A project proposal"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-7",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "a budget spreadsheet",
+      "quote": "a budget spreadsheet",
+      "start": 257,
+      "end": 277,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "a budget spreadsheet"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-8",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "a public source repository URL",
+      "quote": "a public source repository URL",
+      "start": 279,
+      "end": 309,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "a public source repository URL"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "fee-9",
+      "key": "fee",
+      "label": "Entry fee",
+      "value": "No entry fee",
+      "quote": "No entry fee",
+      "start": 322,
+      "end": 334,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "No entry fee"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "ai_policy-10",
+      "key": "ai_policy",
+      "label": "AI policy",
+      "value": "AI-assisted development is allowed with disclosure",
+      "quote": "AI-assisted development is allowed with disclosure",
+      "start": 347,
+      "end": 397,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "AI-assisted development is allowed with disclosure"
+      },
+      "status": "supported"
+    }
+  ],
+  "decisions": {
+    "eligibility": {
+      "choice": "eligible",
+      "confidence": 0.97,
+      "probabilities": {
+        "eligible": 0.97
+      }
+    },
+    "deadline": {
+      "choice": "open",
+      "confidence": 0.97,
+      "probabilities": {
+        "open": 0.97
+      }
+    }
+  },
+  "models": {
+    "extract": "synthetic-fixture-not-an-api-response",
+    "decide": "synthetic-fixture-not-an-api-response",
+    "verify": "synthetic-fixture-not-an-api-response"
+  },
+  "transport": [],
+  "source": "FICTIONAL OPPORTUNITY — Open Tools Microgrant\n\nEligibility: Independent developers aged 18 or older may apply worldwide. Employees of the organizer may not enter.\n\nSubmission deadline: December 15, 2026 at 17:00 UTC.\nRequired documents: A project proposal; a budget spreadsheet; a public source repository URL.\nEntry fee: No entry fee.\nAI policy: AI-assisted development is allowed with disclosure.\nThis synthetic notice is for demonstration only.",
+  "applicant": "I am a 29-year-old independent developer living in South Korea. I am not employed by the organizer. I am applying alone.",
+  "policy": {
+    "threshold": 0.85,
+    "description": "Review required for missing critical facts, uncertain reads, mismatched spans, or unverified claims. Ready means ready for human review, never a submission or guarantee."
+  }
+}

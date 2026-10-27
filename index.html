@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="An evidence-first desk for opportunity decisions, powered by Clocked."><title>Evidence Desk — Make the next move with evidence.</title><link rel="stylesheet" href="./style.css"><script defer src="./app.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="./" aria-label="Evidence Desk home"><span class="brand-icon">e<span>↓</span></span>Evidence Desk<span class="beta">FIELD NOTES / 01</span></a><div class="top-right"><span class="clocked">Built with <strong>Clocked</strong></span><span id="mode" class="mode">Connecting</span></div></header>
+<main>
+<section class="intro"><div><p class="eyebrow">FROM FINE PRINT TO A CLEAR NEXT STEP</p><h1>Opportunity is everywhere.<br><span>Certainty takes evidence.</span></h1><p class="lede">Read the requirements. Check the fit. See exactly what supports the call.<br>A decision desk for grants, awards, and open calls.</p></div><div class="intro-note"><span class="note-number">03</span><p>purposeful reads.<br>One inspectable decision.</p><span class="mini-flow">EXTRACT → DECIDE → VERIFY</span></div></section>
+<div id="mode-notice" class="notice"></div>
+<div id="record-bar" class="record-bar" hidden><span><strong>A real API run, preserved.</strong> Three HTTP 200 responses · 20 credits · eligibility held for review.</span><button id="record" class="text-button">Inspect recorded live run ↗</button></div>
+<div class="workspace">
+<section class="input-panel" aria-label="Review inputs">
+<div class="panel-heading"><h2><span class="section-index">01</span> The source</h2><span class="small-label">START HERE</span></div>
+<label class="field-label" for="example">Explore a synthetic scenario</label><select id="example"></select>
+<div id="example-detail" class="field-help"></div>
+<label class="field-label" for="notice-text">Opportunity notice <span id="count"></span></label><textarea id="notice-text" spellcheck="false" rows="14" placeholder="Paste the complete notice, including updates and exceptions."></textarea>
+<div class="profile-heading"><label class="field-label" for="profile">Applicant facts</label><span class="small-label">NO PERSONAL DATA NEEDED</span></div><textarea id="profile" rows="4" spellcheck="false" placeholder="Relevant location, age range, organization, and status."></textarea>
+<button id="review" class="primary">Review the evidence <span aria-hidden="true">↗</span></button>
+<p class="privacy">Text stays in this browser and server memory. In live mode, your inputs are sent to Clocked for analysis. No database or analytics.</p>
+<div id="error" class="error" role="alert" hidden></div>
+</section>
+<section class="result-panel" aria-label="Review results" aria-live="polite">
+<div class="panel-heading"><h2><span class="section-index">02</span> The evidence</h2><div class="result-actions"><button id="export" class="text-button" disabled>Export JSON ↓</button><button id="print" class="text-button" disabled>Print ↗</button></div></div>
+<div id="empty" class="empty"><div class="paper-stack"><div class="paper"><span></span><span></span><span></span><span class="paper-check">✓</span></div></div><p class="eyebrow">EVERY CALL NEEDS A PAPER TRAIL</p><h3>Less guessing.<br>More ground to stand on.</h3><p>Run a review to see source passages,<br>confidence, and the facts still missing.</p><div class="empty-legend"><span><i class="dot green"></i> Supported</span><span><i class="dot amber"></i> Needs review</span><span><i class="dot gray"></i> Not stated</span></div></div>
+<div id="loading" class="loading" hidden><div class="spinner"></div><h3>Reading between the lines.<br>Checking against the source.</h3><p>Extracting facts → assessing fit → verifying claims.<br>A review can take up to three minutes.</p></div>
+<div id="result" hidden></div>
+</section>
+</div>
+<section class="how"><div><span>01 / EXTRACT</span><h3>Keep the exact words.</h3><p>Verbatim facts and Unicode-safe source positions. Missing information stays missing.</p></div><div><span>02 / DECIDE</span><h3>Make uncertainty visible.</h3><p>Applicant fit and deadline status come with probabilities. Uncertain cases wait for review.</p></div><div><span>03 / VERIFY</span><h3>Check every claim.</h3><p>Each extracted fact is checked against the notice. A contradiction prevents a clean handoff.</p></div></section>
+</main><footer><span class="footer-brand">Evidence Desk</span><span>A starting point for human review. Never an automatic submission.</span><a href="https://clocked.rezolve.ai/docs" target="_blank" rel="noreferrer">Clocked API docs ↗</a></footer>
+</body></html>

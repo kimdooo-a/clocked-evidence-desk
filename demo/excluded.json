@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "mode": "fixture",
+  "reviewedAt": "2026-10-27T12:00:00.000Z",
+  "outcome": "not_eligible",
+  "reasons": [],
+  "title": "Campus Makers Prize",
+  "rows": [
+    {
+      "id": "title-0",
+      "key": "title",
+      "label": "Opportunity",
+      "value": "Campus Makers Prize",
+      "quote": "Campus Makers Prize",
+      "start": 24,
+      "end": 43,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "Campus Makers Prize"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "deadline-1",
+      "key": "deadline",
+      "label": "Submission deadline",
+      "value": "December 15, 2026 at 17:00 UTC",
+      "quote": "December 15, 2026 at 17:00 UTC",
+      "start": 148,
+      "end": 178,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "December 15, 2026 at 17:00 UTC"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "timezone-2",
+      "key": "timezone",
+      "label": "Deadline timezone",
+      "value": "UTC",
+      "quote": "UTC",
+      "start": 175,
+      "end": 178,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "UTC"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "eligibility-3",
+      "key": "eligibility",
+      "label": "Eligibility requirements",
+      "value": "currently enrolled university students in Canada",
+      "quote": "currently enrolled university students in Canada",
+      "start": 77,
+      "end": 125,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "currently enrolled university students in Canada"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-4",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "Proof of university enrollment",
+      "quote": "Proof of university enrollment",
+      "start": 200,
+      "end": 230,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "Proof of university enrollment"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "documents-5",
+      "key": "documents",
+      "label": "Required documents",
+      "value": "a project proposal",
+      "quote": "a project proposal",
+      "start": 232,
+      "end": 250,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "a project proposal"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "fee-6",
+      "key": "fee",
+      "label": "Entry fee",
+      "value": "No entry fee",
+      "quote": "No entry fee",
+      "start": 263,
+      "end": 275,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "No entry fee"
+      },
+      "status": "supported"
+    },
+    {
+      "id": "ai_policy-7",
+      "key": "ai_policy",
+      "label": "AI policy",
+      "value": "AI-assisted development is allowed with disclosure",
+      "quote": "AI-assisted development is allowed with disclosure",
+      "start": 288,
+      "end": 338,
+      "confidence": 0.98,
+      "exact": true,
+      "verification": {
+        "verdict": "supported",
+        "support": 0.98,
+        "quote": "AI-assisted development is allowed with disclosure"
+      },
+      "status": "supported"
+    }
+  ],
+  "decisions": {
+    "eligibility": {
+      "choice": "ineligible",
+      "confidence": 0.97,
+      "probabilities": {
+        "ineligible": 0.97
+      }
+    },
+    "deadline": {
+      "choice": "open",
+      "confidence": 0.97,
+      "probabilities": {
+        "open": 0.97
+      }
+    }
+  },
+  "models": {
+    "extract": "synthetic-fixture-not-an-api-response",
+    "decide": "synthetic-fixture-not-an-api-response",
+    "verify": "synthetic-fixture-not-an-api-response"
+  },
+  "transport": [],
+  "source": "FICTIONAL OPPORTUNITY — Campus Makers Prize\n\nEligibility: Applicants must be currently enrolled university students in Canada.\nSubmission deadline: December 15, 2026 at 17:00 UTC.\nRequired documents: Proof of university enrollment; a project proposal.\nEntry fee: No entry fee.\nAI policy: AI-assisted development is allowed with disclosure.\nThis synthetic notice is for demonstration only.",
+  "applicant": "I am a 29-year-old independent developer living in South Korea. I am not employed by the organizer. I am applying alone.",
+  "policy": {
+    "threshold": 0.85,
+    "description": "Review required for missing critical facts, uncertain reads, mismatched spans, or unverified claims. Ready means ready for human review, never a submission or guarantee."
+  }
+}
