@@ -5,6 +5,6 @@
   "type": "module",
   "description": "Source-backed opportunity review with Clocked Extract, Decide and Verify",
   "engines": { "node": ">=22" },
-  "scripts": { "start": "node server.mjs", "test": "node --test" },
+  "scripts": { "start": "node server.mjs", "test": "node --test", "export:static": "node scripts/export-static.mjs", "smoke:live": "node scripts/live-smoke.mjs" },
   "license": "MIT"
 }

@@ -1,0 +1,32 @@
+import { mkdir } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE ? pathToFileURL(process.env.PLAYWRIGHT_MODULE).href : 'playwright');
+const browser = await chromium.launch({ headless: true });
+const page = await browser.newPage({ viewport: { width: 1440, height: 1080 }, deviceScaleFactor: 1 });
+const errors = [];
+page.on('pageerror', error => errors.push(error.message));
+const folder = new URL('../evidence/', import.meta.url);
+await mkdir(folder, { recursive: true });
+try {
+  await page.goto(process.env.QA_URL ?? 'http://127.0.0.1:4318');
+  await page.getByText('FIXTURE DEMO / NO API CALLS', { exact: true }).waitFor();
+  await page.screenshot({ path: new URL('desktop-start.png', folder).pathname.replace(/^\/(\w:)/, '$1'), fullPage: true });
+  await page.getByRole('button', { name: 'Review the evidence' }).click();
+  await page.getByText('Ready for your review.', { exact: true }).waitFor();
+  await page.locator('details').first().locator('summary').click();
+  await page.screenshot({ path: new URL('desktop-supported.png', folder).pathname.replace(/^\/(\w:)/, '$1'), fullPage: true });
+  await page.getByLabel('Explore a synthetic scenario').selectOption('ambiguous');
+  if (!await page.getByRole('button', { name: 'Export JSON' }).isDisabled()) throw new Error('Stale results must not be exported.');
+  await page.getByRole('button', { name: 'Review the evidence' }).click();
+  await page.getByText('Hold. A fact is still missing.', { exact: true }).waitFor();
+  await page.screenshot({ path: new URL('desktop-hold.png', folder).pathname.replace(/^\/(\w:)/, '$1'), fullPage: true });
+  await page.getByLabel('Explore a synthetic scenario').selectOption('excluded');
+  await page.getByRole('button', { name: 'Review the evidence' }).click();
+  await page.getByText('This applicant does not fit.', { exact: true }).waitFor();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({ path: new URL('mobile-blocked.png', folder).pathname.replace(/^\/(\w:)/, '$1'), fullPage: true });
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
+  if (overflow) throw new Error('Mobile horizontal overflow detected.');
+  if (errors.length) throw new Error(errors.join('\n'));
+  process.stdout.write('Browser QA passed: three outcomes, source inspection, stale export guard, 390px layout, zero page errors.\n');
+} finally { await browser.close(); }

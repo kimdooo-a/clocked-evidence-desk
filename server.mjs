@@ -1,6 +1,7 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import { fixtures, fixtureReview } from './lib/fixtures.mjs';
 import { liveReview } from './lib/evidence.mjs';
 
@@ -16,7 +17,11 @@ export function createServer({ apiKey = process.env.CLOCKED_API_KEY, review = li
     res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'");
     const path = new URL(req.url, 'http://localhost').pathname;
     try {
-      if (req.method === 'GET' && path === '/api/config') return send(200, { mode: apiKey ? 'live' : 'fixture', fixtures: fixtures.map(({ id, label, detail, text, profile }) => ({ id, label, detail, text, profile })) });
+      if (req.method === 'GET' && path === '/api/config') return send(200, { mode: apiKey ? 'live' : 'fixture', recordPath: './api/record', fixtures: fixtures.map(({ id, label, detail, text, profile }) => ({ id, label, detail, text, profile })) });
+      if (req.method === 'GET' && path === '/api/record') {
+        const record = JSON.parse(await readFile(new URL('./evidence/live-review.json', import.meta.url), 'utf8'));
+        return send(200, { ...record, delivery: 'recorded' });
+      }
       if (req.method === 'POST' && path === '/api/review') {
         // 외부 사이트의 브라우저를 통한 로컬 API 사용을 차단한다.
         if (req.headers.origin && new URL(req.headers.origin).host !== req.headers.host) return send(403, { error: 'Cross-origin requests are not accepted.' });
@@ -48,7 +53,7 @@ export function createServer({ apiKey = process.env.CLOCKED_API_KEY, review = li
   });
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL(`file:///${process.argv[1].replaceAll('\\', '/')}`))) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const port = Number(process.env.PORT ?? 4318);
   const host = process.env.HOST ?? '127.0.0.1';
   createServer().listen(port, host, () => process.stdout.write(`Evidence Desk: http://${host}:${port} (${process.env.CLOCKED_API_KEY ? 'live Clocked API' : 'synthetic fixtures; no API calls'})\n`));
