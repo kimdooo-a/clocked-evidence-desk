@@ -1,0 +1,10 @@
+{
+  "name": "clocked-evidence-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Source-backed opportunity review with Clocked Extract, Decide and Verify",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node server.mjs", "test": "node --test" },
+  "license": "MIT"
+}
