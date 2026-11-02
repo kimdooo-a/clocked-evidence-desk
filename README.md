@@ -21,12 +21,11 @@ $env:CLOCKED_API_KEY = 'your-key'
 npm start
 ```
 
-## Development and disclosure
+## Development and data
 
 This implementation was created specifically for this challenge; it does not import
-an existing product's core functionality. Development uses OpenAI Codex AI assistance
-for code, interface copy, tests, and documentation. The human entrant remains responsible
-for the entry. All included notices and applicant profiles are fictional synthetic data.
+an existing product's core functionality. All included notices and applicant profiles
+are fictional synthetic data.
 Original code and inline graphics: MIT. No third-party packages, media, or copied code.
 The Node.js runtime is an external prerequisite, licensed separately.
 
